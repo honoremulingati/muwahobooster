@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get followers by IA</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: transparent;
+        }
+        nav {
+            margin-bottom:20px;
+        }
+        div {
+        width: auto;
+          height:auto;  
+        }
+        #abonnement-container, #moi-container,#moi-containe, #resultat {
+            width: 50%;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display:none ;
+            background-color: pink;
+        }
+        button {
+            border-radius: 12px;
+            background-color:gold;
+            color:black;
+            
+        }
+    .lemu {
+        width:100%;
+        height: 200px;
+        background-color:white;
+    }
+    option {
+        content-visibility:auto;
+    }
+    select {
+        width:auto;
+        height: 50px;
+    }
+    label {
+        color:darkgray;
+    }
+    #plateforme {
+        background-color: black;
+        color: white;
+    }
+    </style>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Incluer le CSS ici */
+        .icon {
+            font-size: 24px; /* Taille de l'icône */
+            color: #333; /* Couleur de l'icône */
+            margin: 10px; /* Marge autour de l'icône */
+            transition: color 0.3s; /* Animation de couleur */
+        }
+
+        .icon:hover {
+            color: #007bff; /* Couleur au survol */
+        }
+
+        .icon-container {
+            display: flex; /* Aligne les icônes en ligne */
+            justify-content: center; /* Centre les icônes */
+            align-items: center; /* Centre verticalement */
+            padding: 20px; /* Espacement intérieur */
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+    <h1>AI Followers ++</h1>
+    </center>
+    <nav>
+        <button id="abonnement-btn">    <i class="fa fa-home icon"></i>
+</button>
+        <button id="moi-btn">    <i class="fa fa-user icon"></i></button>
+        <button id="moi-b">    <i class="fa fa-bars icon"></i></button>
+    </nav>
+    <div id="abonnement-container" style="display:block">
+        <form id="abonnement-form">
+            <label for="plateforme">Choisissez une plateforme :</label>
+            <select id="plateforme" name="plateforme">
+                <option value="tiktok">TikTok</option>
+                <option value="facebook">Facebook</option>
+            </select>
+            <br>
+            <label for="lien">Entrez le lien :</label>
+            <input type="text" id="lien" name="lien">
+            <br>
+            <button id="payer-btn" type="submit">Payer 3000 FCFA</button>
+            <p>pour 1k d'abonnees</p>
+        </form>
+    </div>
+    <div id="moi-container">
+        <h2>Faire un dépôt:</h2>
+        <button id="depot-btn">MTN</button><br><br/>
+        <button id="depot-b">ORANGE</button><br><br/>
+        <button id="solde-btn" style="background-color:gray">Voir le solde</button>
+        <p id="solde-text"></p>
+    </div>
+    
+    <div id="resultat" style="color:white;display:block"></div>
+    <br>
+    <b class="lemu">Abonnées: <u> 72K + 52K ✅</u></b>
+<br>  <b>Prix: 3000F ➡️ 1K Followers </b>
+<br><br/>
+<a href="https://www.facebook.com/profile.php?id=61566802236174"> @contact support</a>
+    <script>
+        let solde = 0;
+
+        document.getElementById("moi-btn").addEventListener("click", () => {
+            document.getElementById("abonnement-container").style.display = "none";
+            document.getElementById("moi-container").style.display = "block";
+        });
+        document.getElementById("abonnement-btn").addEventListener("click", () => {
+            document.getElementById("abonnement-container").style.display = "block";
+            document.b("moi-container").style.display = "none";
+        });
+
+document.getElementById("depot-btn").addEventListener("click", () => {
+
+    // Ouvrir l'application téléphone avec le code
+    const phoneNumber = "674073769";
+    const code = `*126*1*1*${phoneNumber}*3000%23`;
+    window.location.href = `tel:${code}`;
+});
+document.getElementById("depot-b").addEventListener("click", () => {
+
+    // Ouvrir l'application téléphone avec le code
+    const phoneNumber = "656962348";
+    const code = `%23150*1*1*${phoneNumber}*3000%23`;
+    window.location.href = `tel:${code}`;
+});
+
+
+        document.getElementById("solde-btn").addEventListener("click", () => {
+            document.getElementById("solde-text").innerText = `Solde : ${solde} FCFA`;
+        });
+
+        document.getElementById("payer-btn").addEventListener("click", (e) => {
+            e.preventDefault();
+            const plateforme = document.getElementById("plateforme").value;
+            const lien = document.getElementById("lien").value;
+
+            if (solde >= 3000) {
+                solde -= 3000;
+                document.getElementById("solde-text").innerText = `Solde : ${solde} FCFA`;
+                
+                // Simulation du paiement
+                document.getElementById("resultat").innerHTML = "Paiement en cours...";
+
+                // Après 10 secondes, afficher le lien
+                setTimeout(() => {
+                    document.getElementById("resultat").innerHTML = `Vous avez obtenu 1k d'abonnés sur ${plateforme} !`;
+                    const lienElement = document.createElement("p");
+                    lienElement.innerHTML = `Lien : <a href="${lien}" target="_blank">${lien}</a>`;
+                    document.getElementById("resultat").appendChild(lienElement);
+                }, 10000);
+            } else {
+                alert("Solde insuffisant !");
+            }
+        });
+    </script>
+</body>
+</html>
