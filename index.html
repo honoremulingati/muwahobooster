@@ -17,14 +17,14 @@
         width: auto;
           height:auto;  
         }
-        #abonnement-container, #moi-container,#moi-containe, #resultat {
+        #abonnement-container, #moi-container, #resultat {
             width: 50%;
             margin: 40px auto;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display:none ;
+            display:none;
             background-color: pink;
         }
         button {
@@ -53,13 +53,13 @@
         color: white;
     }
     </style>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     
     <style>
-        /* Incluer le CSS ici */
+        /* Inclure le CSS ici */
         .icon {
             font-size: 24px; /* Taille de l'icône */
             color: #333; /* Couleur de l'icône */
@@ -128,30 +128,28 @@
         });
         document.getElementById("abonnement-btn").addEventListener("click", () => {
             document.getElementById("abonnement-container").style.display = "block";
-            document.b("moi-container").style.display = "none";
+            document.getElementById("moi-container").style.display = "none";
         });
 
-document.getElementById("depot-btn").addEventListener("click", () => {
-
-    // Ouvrir l'application téléphone avec le code
-    const phoneNumber = "243981732170";
-    const code = `*501*1*1*1*1*${243981732170}*4%23`;
-    window.location.href = `tel:${code}`;
-});
-document.getElementById("depot-b").addEventListener("click", () => {
-
-    // Ouvrir l'application téléphone avec le code
-    const phoneNumber = 243832972068";
-    const code = `%1122*1*1*2*1*${243832972068}*4*%23`;
-    window.location.href = `tel:${code}`;
-});
-
+        document.getElementById("depot-btn").addEventListener("click", () => {
+            // Ouvrir l'application téléphone avec le code
+            const phoneNumber = "243981732170";
+            const code = `*501*1*1*1*1*${phoneNumber}*4%23`;
+            window.location.href = `tel:${code}`;
+        });
+        
+        document.getElementById("depot-b").addEventListener("click", () => {
+            // Ouvrir l'application téléphone avec le code
+            const phoneNumber = "243832972068";
+            const code = `%1122*1*1*2*1*${phoneNumber}*4*%23`;
+            window.location.href = `tel:${code}`;
+        });
 
         document.getElementById("solde-btn").addEventListener("click", () => {
             document.getElementById("solde-text").innerText = `Solde : ${solde} FCFA`;
         });
 
-        document.getElementById("payer-btn").addEventListener("click", (e) => {
+        document.getElementById("abonnement-form").addEventListener("submit", (e) => {
             e.preventDefault();
             const plateforme = document.getElementById("plateforme").value;
             const lien = document.getElementById("lien").value;
