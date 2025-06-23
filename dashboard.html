@@ -1,16 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Tableau de bord – MUWAHOBOOSTER</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="whatsapp-btn.js"></script>
 </head>
 <body>
-  <h2>Bienvenue 👋</h2>
-  <p>Choisissez une action :</p>
-  <form>
-    <a href="commande.php"><button type="button">📦 Passer une commande</button></a>
-    <a href="recharge.php"><button type="button">💳 Recharger mon solde</button></a>
-  </form>
+  <header style="text-align:center;">
+    <h2>👋 Bienvenue sur <span style="color:#ffcc00;">MUWAHOBOOSTER</span></h2>
+    <h3>💰 Solde : <span id="solde-usd">10.00 USD</span> | <span id="solde-cdf">29 000 CDF</span></h3>
+  </header>
+
+  <main>
+    <div style="margin-top:30px;">
+      <a href="commande.php"><button>📦 Passer une commande</button></a>
+      <a href="recharge.php"><button>💳 Recharger mon solde</button></a>
+      <a href="historique.php"><button>🕓 Historique</button></a>
+    </div>
+  </main>
 </body>
 </html>
